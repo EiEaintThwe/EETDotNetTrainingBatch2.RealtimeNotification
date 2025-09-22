@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Realtime Notifications";
+}
+
+<div class="container mt-4">
+
+
+    <h3>📢 Announcements</h3>
+    <div class="mt-4">
+        <input type="text" id="announcementTitle" placeholder="Title" class="form-control mb-2" />
+        <textarea id="announcementContent" placeholder="Content" class="form-control mb-2"></textarea>
+        <button id="sendAnnouncementBtn" class="btn btn-success">Send Announcement</button>
+    </div>
+    
+    <div class="mt-4">
+        <span id="notificationCount" class="badge bg-danger">0</span>
+        <button id="showListBtn" class="btn btn-primary btn-sm">Show Details</button>
+    </div>
+    <ul id="announcementList" class="mt-3"></ul>
+</div>
+
+@section scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/notification.js"></script>
+}
