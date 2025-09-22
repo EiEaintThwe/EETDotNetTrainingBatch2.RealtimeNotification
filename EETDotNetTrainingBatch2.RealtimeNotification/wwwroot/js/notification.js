@@ -17,7 +17,7 @@ document.getElementById("sendAnnouncementBtn").addEventListener("click", functio
         return;
     }
 
-    fetch(`/Home/SendAnnouncement?title=${title}&content=${content}`)
+    fetch(`/Home/SendAnnouncement?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}`)
         .then(response => {
             if (response.ok) {
                 alert("✅ Announcement sent!");
